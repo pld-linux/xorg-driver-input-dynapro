@@ -1,12 +1,12 @@
 Summary:	X.org input driver for Dynapro devices
 Summary(pl):	Sterownik wej¶ciowy X.org dla urz±dzeñ Dynapro
 Name:		xorg-driver-input-dynapro
-Version:	1.0.0.2
+Version:	1.0.0.3
 Release:	0.1
 License:	MIT
 Group:		X11/Applications
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC2/driver/xf86-input-dynapro-%{version}.tar.bz2
-# Source0-md5:	954d28fd7432bc9c1caa0b6fd018f2bd
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC3/driver/xf86-input-dynapro-%{version}.tar.bz2
+# Source0-md5:	84263223441c96a5935110f96fedd1ca
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -14,7 +14,7 @@ BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-proto-inputproto-devel
 BuildRequires:	xorg-proto-randrproto-devel
-BuildRequires:	xorg-util-util-macros >= 0.99.1
+BuildRequires:	xorg-util-util-macros >= 0.99.2
 BuildRequires:	xorg-xserver-server-devel >= 0.99.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -42,8 +42,7 @@ Sterownik wej¶ciowy X.org dla urz±dzeñ Dynapro.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT \
-	drivermandir=%{_mandir}/man4
+	DESTDIR=$RPM_BUILD_ROOT
 
 rm -f $RPM_BUILD_ROOT%{_libdir}/xorg/modules/*/*.la
 
@@ -54,4 +53,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog
 %attr(755,root,root) %{_libdir}/xorg/modules/input/dynapro_drv.so
-%{_mandir}/man4/dynapro.4x*
+%{_mandir}/man4/dynapro.4*
