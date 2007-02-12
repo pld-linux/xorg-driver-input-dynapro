@@ -1,5 +1,5 @@
 Summary:	X.org input driver for Dynapro devices
-Summary(pl.UTF-8):   Sterownik wejściowy X.org dla urządzeń Dynapro
+Summary(pl.UTF-8):	Sterownik wejściowy X.org dla urządzeń Dynapro
 Name:		xorg-driver-input-dynapro
 Version:	1.1.0
 Release:	0.1
