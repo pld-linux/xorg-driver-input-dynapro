@@ -1,22 +1,22 @@
 Summary:	X.org input driver for Dynapro devices
 Summary(pl.UTF-8):	Sterownik wejściowy X.org dla urządzeń Dynapro
 Name:		xorg-driver-input-dynapro
-Version:	1.1.0
+Version:	1.1.1
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-input-dynapro-%{version}.tar.bz2
-# Source0-md5:	1683178d09dfc604dde9ea2aab950a28
+# Source0-md5:	d47be12a230c44a05d56d6b79ebcfc38
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	rpmbuild(macros) >= 1.389
 BuildRequires:	xorg-proto-inputproto-devel
 BuildRequires:	xorg-proto-randrproto-devel
 BuildRequires:	xorg-util-util-macros >= 0.99.2
 BuildRequires:	xorg-xserver-server-devel >= 1.0.99.901
-BuildRequires:  rpmbuild(macros) >= 1.389
 %requires_xorg_xserver_xinput
 Requires:	xorg-xserver-server >= 1.0.99.901
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
